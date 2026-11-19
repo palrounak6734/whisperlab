@@ -9,8 +9,8 @@
     --danger: #ef4444;
     --danger-hover: #dc2828;
     
-    --font-body: 'Nunito', sans-serif;
-    --font-mono: 'Source Code Pro', monospace;
+    --font-body: 'Sora', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
 }
 
 * {
@@ -21,6 +21,11 @@
 
 body {
     background-color: var(--bg-color);
+    background-image: radial-gradient(circle at 50% 30%, rgba(15, 23, 42, 0.78), rgba(10, 15, 30, 0.94)), url('bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: var(--text-primary);
     font-family: var(--font-body);
     line-height: 1.6;
@@ -42,8 +47,10 @@ h1, h2, h3 {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: var(--card-bg);
-    border-bottom: 1px solid var(--border-color);
+    background-color: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .nav-left {
@@ -188,10 +195,13 @@ h1, h2, h3 {
 
 /* Cards */
 .card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
+    background-color: rgba(30, 41, 59, 0.72);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     padding: 1.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
 }
 
 .card h3 {
